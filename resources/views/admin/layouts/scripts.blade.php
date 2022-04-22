@@ -12,6 +12,7 @@
 <script src="{{asset('admin/js/bootstrap.js')}}"></script>
 <script src="{{asset('admin/js/datepicker.js')}}"></script>
 <script src="{{asset('admin/js/waves.js')}}"></script>
+<script src="{{asset('admin/js/select2.js')}}"></script>
 <script>
     $(function (){
         $(".loader").delay(1000).fadeOut("slow");

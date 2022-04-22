@@ -94,6 +94,72 @@
                     </ul>
                 </li>
             @endcanany
+            @canany(['department-create'])
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle waves-effect" href="#" id="department" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    <span>
+                        Department
+                    </span>
+                        <i class="fa fa-plus"></i>
+                    </a>
+                    <ul class="dropdown-menu" aria-labelledby="department">
+                        @can('department-create')
+                            <li><a class="dropdown-item" href="{{route('department.create')}}">Add New / View All</a></li>
+                        @endcan
+                    </ul>
+                </li>
+            @endcanany
+            @canany(['contact-info-list','contact-info-create'])
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle waves-effect" href="#" id="contact-info" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    <span>
+                        Contact Information
+                    </span>
+                        <i class="fa fa-plus"></i>
+                    </a>
+                    <ul class="dropdown-menu" aria-labelledby="contact-info">
+                        @can('contact-info-create')
+                            <li><a class="dropdown-item" href="{{route('contact-info.create')}}">Add New</a></li>
+                        @endcan
+                        @can('contact-info-list')
+                            <li><a class="dropdown-item" href="{{route('contact-info.index')}}">View All</a></li>
+                        @endcan
+                    </ul>
+                </li>
+            @endcanany
+            @canany(['category-create'])
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle waves-effect" href="#" id="category" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                <span>
+                    Category
+                </span>
+                    <i class="fa fa-plus"></i>
+                </a>
+                <ul class="dropdown-menu" aria-labelledby="category">
+                    @can('category-create')
+                        <li><a class="dropdown-item" href="{{route('category.create')}}">Add New / View All</a></li>
+                    @endcan
+                </ul>
+            </li>
+        @endcanany
+            @canany(['reminder-list','reminder-create'])
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle waves-effect" href="#" id="reminder" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    <span>
+                        Reminder
+                    </span>
+                        <i class="fa fa-plus"></i>
+                    </a>
+                    <ul class="dropdown-menu" aria-labelledby="reminder">
+                        @can('reminder-create')
+                            <li><a class="dropdown-item" href="{{route('reminder.create')}}">Add New</a></li>
+                        @endcan
+                        @can('reminder-list')
+                            <li><a class="dropdown-item" href="{{route('reminder.index')}}">View All</a></li>
+                        @endcan
+                    </ul>
+                </li>
+            @endcanany
         </ul>
     </nav>
 </nav>
